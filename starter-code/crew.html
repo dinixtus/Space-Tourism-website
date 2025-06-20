@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <script defer src="JS/crew.js"></script>
+  <script defer src="JS/all.js"></script>
+  <link rel="stylesheet" href="./styles/all-style.css">
+  <link rel="stylesheet" href="./styles/crew.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <div class="hiddenMenu" id="menu">
+    <button id="closeButton"><hr><hr class="left"></button>
+    <ul class="navbar-list">
+      <li class="navbar-list-block"><a href="index.html">00 Home</a></li>
+      <li class="navbar-list-block"><a href="destination.html">01 Destination</a></li>
+      <li class="navbar-list-block"><a href="crew.html">02 Crew</a><hr></li>
+      <li class="navbar-list-block"><a href="technology.html">03 Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-1 col-md-12 col-sm-6">
+          <img src="assets/shared/logo.svg" alt="" class="header-logo">
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <hr>
+        </div>
+        <div class="nav col-lg-7 col-md-12">
+          <ul class="navbar-list">
+            <li class="navbar-list-block"><a href="index.html">00 Home</a></li>
+            <li class="navbar-list-block"><a href="destination.html">01 Destination</a></li>
+            <li class="navbar-list-block"><a href="crew.html">02 Crew</a><hr></li>
+            <li class="navbar-list-block"><a href="technology.html">03 Technology</a></li>
+          </ul>
+        </div>
+        <div class="menuButton col-6">
+          <button id="menuBtn">
+            <hr>
+            <hr>
+            <hr>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <h2><span>02</span> Meet your crew</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-md-12">
+          <h3 id="special">Commander</h3>
+          <span id="crewMember">Douglas Hurley</span>
+          <p id="crewMemberInfo">
+            Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+            and former NASA astronaut. He launched into space for the third time as 
+            commander of Crew Dragon Demo-2.
+          </p>
+          <ul>
+            <li><button class="crewButton active"></button></li>
+            <li><button class="crewButton"></button></li>
+            <li><button class="crewButton"></button></li>
+            <li><button class="crewButton"></button></li>
+          </ul>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <img id="memberPic" src="./assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

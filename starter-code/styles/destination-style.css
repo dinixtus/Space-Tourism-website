@@ -1,10 +1,5 @@
 body {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    text-align: center;
 }
 
 main {
@@ -30,7 +25,7 @@ main {
 }
 
 .planet-block img {
-    margin: 60px 0 0 120px;
+    margin: 60px 0 0 20px;
 }
 
 .info-block {
@@ -66,18 +61,25 @@ main {
     height: 2px;
     border: none;
     background-color: white;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .info-block h2 {
     font-size: 90px;
     text-transform: uppercase;
     font-weight: 400;
+    opacity: 1;
+    transition: opacity 1.0s ease, transform 1.2s ease;
 }
 
 .main-info {
     width: 400px;
     margin-top: 20px;
     color: rgb(210, 216, 249);
+    opacity: 1;
+    transition: opacity 1.0s ease;
 }
 
 .info-block hr {
@@ -100,4 +102,75 @@ main {
 .info-bottom p {
     font-size: 30px;
     text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 1.0s ease;
+}
+
+.planet-pic {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    top: 55%;
+    left: 30%;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    body {
+        background-image: url(../assets/destination/background-destination-mobile.jpg)
+    }
+    .planet-block img {
+        margin: 60px 0 0 -40px;
+    }
+    main {
+        margin-top: 30px;
+    }
+    main .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .planet-block {
+        text-align: center;
+    }
+    .planet-pic {
+        width: 50%;
+        height: 50%;
+        position: relative;
+        top: 200px;
+        left: 230px;
+    }
+    .info-block {
+        text-align: center;
+    }
+    .buttons-block {
+        justify-content: space-around;
+    }
+    .main-info {
+        width: 100%;
+    }
+    .info-block hr {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .info-bottom {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .info-block h2 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 550px) {
+    .planet-pic {
+        width: 30%;
+        height: 30%;
+    }
+    .planet-block img {
+        margin-top: 10px;
+    }
+    .planet-pic {
+        top: 70px;
+        left: 70px;
+    }
 }

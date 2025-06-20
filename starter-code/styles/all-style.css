@@ -5,8 +5,23 @@
     color: white;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    background-color: black
+}
+
 .active {
     opacity: 1 !important;
+    transform: scaleX(1) !important;
 }
 
 .header {
@@ -32,11 +47,11 @@
     opacity: 1;
 }
 
-.navbar-list {
+.header .navbar-list {
     display: flex !important;
     flex-direction: row !important;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     list-style: none;
     padding-top: 10px;
     height: 80px;
@@ -60,4 +75,122 @@
     letter-spacing: 2px;
     transition: color 0.5s ease;
     font-weight: 600;
+}
+
+#menuBtn {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(71, 71, 71);
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+#menuBtn  hr {
+    margin: 5px 0 5px 0;
+    width: 100%;
+}
+
+#menuBtn:hover {
+    transform: scale(1.2);
+}
+
+.hiddenMenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(32, 32, 32, 0.772);
+    padding: 30px;
+    z-index: 2;
+}
+
+.hiddenMenu .navbar-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin-left: -30px;
+}
+
+.hiddenMenu .navbar-list-block {
+    text-align: center;
+}
+
+.hiddenMenu .navbar-list-block a {
+    font-size: 30px;
+}
+
+.hiddenMenu hr {
+    opacity: 1;
+    height: 3px;
+}
+
+.hiddenMenu button {
+    width: 60px;
+    height: 60px;
+    background-color:rgba(71, 71, 71, 0);
+    border: none;
+}
+
+.hiddenMenu button hr {
+    height: 2px;
+    border: none;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.hiddenMenu button .left {
+    transform: rotate(-45deg);
+    margin-top: -20px;
+}
+
+@media (max-width: 990px) {
+    .header hr {
+        width: 100%;
+    }
+    .nav {
+        width: 100%;
+        margin-left: 0 !important;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .header .navbar-list {
+        width: 100% !important;
+        text-align: center;
+        justify-content: space-around;
+        margin-left: -25px !important;
+    }
+    .header .col-lg-1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 580px) {
+    .menuButton {
+        display: flex;
+        justify-content: end;
+        width: 30%;
+    }
+    #menuBtn {
+        display: block !important;
+    }
+    .header .col-lg-3 {
+        display: none !important;
+    }
+    .header .nav {
+        display: none !important;
+    }
+    .header .col-lg-1 {
+        width: 60px !important;
+    }
+    .header .row {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }

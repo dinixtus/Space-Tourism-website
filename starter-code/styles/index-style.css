@@ -1,10 +1,5 @@
 body {
     background-image: url(../assets/home/background-home-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    text-align: center;
 }
 
 main {
@@ -24,18 +19,20 @@ main h2 {
     font-size: 120px;
     text-transform: uppercase;
     letter-spacing: 15px;
+    width: 100%;
 }
 
 main p {
     margin-top: 30px;
     width: 560px;
+    width: 95%;
 }
 
 .button-block {
     text-align: right;
 }
 
-button {
+main button {
     width: 300px;
     height: 300px;
     border: none;
@@ -48,6 +45,53 @@ button {
     color: black;
 }
 
-button:hover {
+main button:hover {
     box-shadow: 0 0 10px 40px rgba(255, 255, 255, 0.362);
+}
+
+@media (max-width: 1350px) {
+    main {
+        padding: 0 100px !important;
+    }
+}
+
+@media (max-width: 990px) {
+    body {
+        background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+    .header {
+        padding: 20px;
+    }
+    main {
+        margin-top: 20px;
+    }
+    main .row {
+        flex-direction: column;
+    }
+    .text-block {
+        text-align: center;
+    }
+    main p {
+        margin-top: 20px;
+    }
+    main h2 {
+        font-size: 90px;
+    }
+    main button {
+        width: 200px;
+        height: 200px;
+        font-size: 24px;
+    }
+    main .button-block {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    main {
+        margin-top: 50px;
+        padding: 0 20px !important;
+    }
 }
